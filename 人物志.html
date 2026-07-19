@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>人物志 · 大佬成长故事</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #f4f7fb; --main: #3b5bdb; --accent: #e8590c;
+    --text: #23324a; --line: #d0d9ea;
+  }
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: var(--bg); color: var(--text); }
+  header {
+    background: #ffffffee; height: 56px; display: flex; align-items: center; gap: 14px;
+    padding: 0 20px; box-shadow: 0 1px 6px rgba(30,50,90,.08);
+    position: sticky; top: 0; z-index: 10;
+  }
+  header h1 { font-size: 18px; color: var(--accent); }
+  header .tip { font-size: 12px; color: #7b8aa5; }
+  header a {
+    margin-left: auto; font-size: 13px; color: var(--main); text-decoration: none;
+    border: 1px solid var(--line); padding: 6px 12px; border-radius: 8px; background: #fff;
+  }
+  header a:hover { background: #eef2ff; }
+
+  .wrap { max-width: 800px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  .card {
+    background: #fff; border-radius: 14px; padding: 20px;
+    box-shadow: 0 2px 10px rgba(30,50,90,.07); margin-bottom: 18px;
+  }
+  .f-tag {
+    display: inline-block; background: #fff0e6; color: var(--accent);
+    font-size: 12px; font-weight: bold; border-radius: 6px; padding: 3px 10px; margin-bottom: 10px;
+  }
+  .f-tag.blue { background: #eef2ff; color: var(--main); }
+  .f-name { font-size: 22px; font-weight: bold; }
+  .f-title { font-size: 14px; color: #7b8aa5; margin: 4px 0 14px; }
+  .f-story { font-size: 15px; line-height: 2; }
+  .f-story p { margin-bottom: 12px; text-indent: 2em; }
+
+  .pod-item { padding: 12px 0; border-bottom: 1px dashed #e6ecf5; }
+  .pod-item:last-child { border-bottom: none; }
+  .pod-item .p-show {
+    display: inline-block; background: #eef2ff; color: var(--main);
+    font-size: 12px; font-weight: bold; border-radius: 5px; padding: 2px 8px; margin-bottom: 4px;
+  }
+  .pod-item .p-title { font-size: 15px; font-weight: bold; line-height: 1.5; }
+  .pod-item .p-title a { color: inherit; text-decoration: none; }
+  .pod-item .p-title a:hover { color: var(--main); }
+  .pod-item .p-note { font-size: 13px; color: #66788f; margin-top: 4px; line-height: 1.6; }
+
+  .name-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .name-list button {
+    border: 1px solid var(--line); background: #fff; border-radius: 20px;
+    padding: 6px 14px; font-size: 13px; cursor: pointer; font-family: inherit; color: var(--text);
+  }
+  .name-list button:hover { border-color: var(--accent); color: var(--accent); }
+  .name-list button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  footer { text-align: center; font-size: 12px; color: #98a6bb; padding: 20px 0 40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📖 人物志</h1>
+  <span class="tip">大佬成长故事 · 一读一听</span>
+  <a href="每日世界.html">🌍 回每日世界</a>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <span class="f-tag blue">🎧 精选播客单（固定10期，听完喊AI换一批）</span>
+    <div id="podList"></div>
+  </div>
+
+  <div class="card">
+    <span class="f-tag">📖 文字人物志 · 今日推荐（每日轮换，也可点下面名字任选）</span>
+    <div id="storyBox"></div>
+  </div>
+
+  <div class="card">
+    <span class="f-tag">👥 全部人物（<span id="figCount">0</span> 位）</span>
+    <div class="name-list" id="nameList"></div>
+  </div>
+
+</div>
+
+<footer>播客点标题跳小宇宙收听 · 文字故事由 AI 整理自公开资料</footer>
+
+<script src="人物志故事库.js"></script>
+<script src="人物志播客单.js"></script>
+<script>
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+/* 播客单 */
+const podBox = document.getElementById("podList");
+podBox.innerHTML = FIGURE_PODCASTS.map((p, i) =>
+  '<div class="pod-item"><span class="p-show">' + esc(p.show) + (p.plays ? ' · ' + esc(p.plays) + '播放' : '') + '</span>' +
+  '<div class="p-title"><a href="' + esc(p.link) + '" target="_blank" rel="noopener">' + (i+1) + '. ' + esc(p.title) + ' ↗</a></div>' +
+  '<div class="p-note">👤 ' + esc(p.guest) + '　💡 ' + esc(p.why) + '</div></div>'
+).join("");
+
+/* 文字故事 */
+let curIdx = Math.floor(Date.now() / 86400000) % FIGURE_LIBRARY.length;
+
+function renderStory() {
+  const f = FIGURE_LIBRARY[curIdx];
+  document.getElementById("storyBox").innerHTML =
+    '<div class="f-name">' + esc(f.name) + '</div>' +
+    '<div class="f-title">' + esc(f.title || "") + '</div>' +
+    '<div class="f-story">' + (f.story || "").split(/\n+/).map(p => '<p>' + esc(p) + '</p>').join("") + '</div>';
+  document.querySelectorAll(".name-list button").forEach((b, i) => b.classList.toggle("on", i === curIdx));
+}
+
+const nl = document.getElementById("nameList");
+FIGURE_LIBRARY.forEach((f, i) => {
+  const b = document.createElement("button");
+  b.textContent = f.name;
+  b.onclick = () => { curIdx = i; renderStory(); window.scrollTo({ top: document.getElementById("storyBox").offsetTop - 80, behavior: "smooth" }); };
+  nl.appendChild(b);
+});
+document.getElementById("figCount").textContent = FIGURE_LIBRARY.length;
+renderStory();
+</script>
+</body>
+</html>

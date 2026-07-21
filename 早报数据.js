@@ -4,6 +4,86 @@
    格式说明见 每日播报_操作规程.md。人物志由 人物志故事库.js 按日轮换，不在本文件。 */
 const DAILY_ARCHIVE = [
   {
+    date: "2026-07-21",
+    weekday: "周二",
+    news: [
+      {
+        cat: "🤖 AI 前沿",
+        items: [
+          { t: "Anthropic 15亿美元版权和解获批", s: "TechCrunch报道，法院已批准Anthropic就版权争议达成的15亿美元和解；报道同时指出，这并未解决训练AI时使用受版权保护作品的更广泛争议。", link: "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/" },
+          { t: "谷歌研发提升Gemini效率的新AI芯片", s: "TechCrunch援引报道称，Alphabet正开发一款新芯片，以提高Gemini模型的运行效率；该项目涉及谷歌在AI计算基础设施上的持续投入。", link: "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/" },
+          { t: "MCP协议拟简化服务端会话处理", s: "TechCrunch报道，面向AI工具连接的MCP协议正通过更宽松、无状态的服务端会话ID处理方式降低使用复杂度，思路接近普通网站的会话机制。", link: "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/" },
+          { t: "阿里Qoder推出安全能力", s: "量子位报道，阿里Qoder上线新的安全能力，定位为向每位用户提供专属安全工程师式的辅助，以支持开发过程中的安全治理。", link: "https://www.qbitai.com/2026/07/455979.html" },
+          { t: "不同模型厂商共用Agentic基础设施受关注", s: "量子位报道聚焦Agentic Infra的发展，讨论不同模型厂商使用同类智能体基础设施的趋势，以及这类底层能力在AI应用部署中的作用。", link: "https://www.qbitai.com/2026/07/455805.html" }
+        ]
+      },
+      {
+        cat: "🇨🇳 中国",
+        items: [
+          { t: "淘天公布AIGX体系四项技术成果", s: "36氪快讯称，淘天集团公布拍立淘全模态实时Agent、if Studio、Coupella智惠引擎和Agentic推荐系统Dream等四项技术成果。", link: "https://www.36kr.com/newsflashes/" },
+          { t: "光轮智能与西门子达成合作", s: "36氪快讯称，光轮智能与西门子在WAIC 2026达成合作，计划将工业软件积累的物理模型、工程参数和工艺知识转化为机器人可调用的仿真能力。", link: "https://www.36kr.com/newsflashes/" },
+          { t: "新易盛称下半年订单交付有望保持增长", s: "36氪快讯援引新易盛投资者关系记录称，其成都、泰国两地产能正依据订单指引扩充，预计下半年订单交付仍将较快增长。", link: "https://www.36kr.com/newsflashes/" }
+        ]
+      },
+      {
+        cat: "🇺🇸 美国·国际",
+        items: [
+          { t: "美国AI标准机构负责人再度离任", s: "TechCrunch报道，美国人工智能标准与创新中心负责人已离任；报道将该职位描述为自前任AI事务负责人离开后人员更替频繁的岗位。", link: "https://techcrunch.com/2026/07/20/trumps-latest-ai-czar-has-already-resigned/" },
+          { t: "波音称推出新客机前仍需修复财务", s: "36氪快讯援引波音首席执行官说法称，公司在研发推出新一代商用客机前，还需用数年修复财务体系并提升现有机型的可靠性与交付效率。", link: "https://www.36kr.com/newsflashes/" },
+          { t: "X重建版Android应用全球上线", s: "TechCrunch报道，X表示其经过一年重建的Android应用已在全球推出，报道将其列为该平台移动端产品更新的一部分。", link: "https://techcrunch.com/2026/07/20/x-relaunches-a-rebuilt-android-app-after-year-long-effort/" }
+        ]
+      },
+      {
+        cat: "💰 财经",
+        items: [
+          { t: "沪市新增回购增持计划上限逾百亿元", s: "36氪快讯援引证券时报称，7月20日晚沪市新增25家上市公司回购或增持计划，金额上限合计超过100亿元。", link: "https://www.36kr.com/newsflashes/" },
+          { t: "热门中概股美股盘前普涨", s: "36氪快讯称，抓取时阿里巴巴、百度盘前涨幅超过3%，京东和网易涨幅超过2%，多只热门中概股盘前走高。", link: "https://www.36kr.com/newsflashes/" },
+          { t: "摩根大通称A股AI回调属去杠杆", s: "36氪援引摩根大通观点称，近期A股AI板块回调更接近杠杆出清而非基本面恶化，并提到大模型进步和硬件供给约束等因素。", link: "https://36kr.com/p/3903247190541955" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·知乎",
+        items: [
+          { t: "【第1】684分考生被志愿规划进双非", s: "知乎热榜第1，话题围绕高分考生花费咨询费后被规划进入双非院校，引发对志愿填报服务责任和信息透明度的讨论。", link: "https://www.zhihu.com/question/2062830801440306762" },
+          { t: "【第2】中国海警公布仁爱礁现场画面", s: "知乎热榜第2，讨论中国海警关于菲律宾非法坐滩舰艇相关事件的声明和现场画面，以及其中值得关注的信息。", link: "https://www.zhihu.com/question/2062608470700975381" },
+          { t: "【第3】日韩为何同步流行麻辣烫", s: "知乎热榜第3，用户围绕日韩地区对麻辣烫的消费热度展开讨论，关注跨国饮食传播及其背后的消费文化因素。", link: "https://www.zhihu.com/question/2058337204255118363" },
+          { t: "【第4】西安中考高分段人数引热议", s: "知乎热榜第4，话题关注西安中考600分以上考生数量较多、599分择校空间受限的现象，并讨论分数与位次的关系。", link: "https://www.zhihu.com/question/2062545131677528566" },
+          { t: "【第5】西班牙夺冠会否改变足球战术", s: "知乎热榜第5，网友讨论西班牙夺冠后其他球队是否会模仿其打法，以及世界杯战术演变对比赛观赏性的影响。", link: "https://www.zhihu.com/question/2062436664497246459" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·B站",
+        items: [
+          { t: "【第1】树恨你", s: "UP主鲤鱼Ace投稿，榜单抓取时播放量约468万，位列B站排行榜第1。", link: "https://www.bilibili.com/video/BV1h4KU66ENd" },
+          { t: "【第2】无骨草鱼教学", s: "UP主温柔雄鱼档发布无骨草鱼制作教学，榜单抓取时播放量约269万，位列B站排行榜第2。", link: "https://www.bilibili.com/video/BV1P6KA6NEDq" },
+          { t: "【第3】订书钉演奏《千本樱》", s: "UP主不那么肝的老肝妈投稿，榜单抓取时播放量约995万，位列B站排行榜第3。", link: "https://www.bilibili.com/video/BV13YNd6dEb9" },
+          { t: "【第4】水皮", s: "UP主文武俩兄弟投稿，榜单抓取时播放量约354万，位列B站排行榜第4。", link: "https://www.bilibili.com/video/BV1dmKJ6YEXV" },
+          { t: "【第5】67岁老人健身教程", s: "UP主周大爷不服老发布老年锻炼主题视频，榜单抓取时播放量约352万，位列B站排行榜第5。", link: "https://www.bilibili.com/video/BV1sUKn6QEQG" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·抖音",
+        items: [
+          { t: "今日抓取失败", s: "抖音热榜接口在本次抓取时出现传输连接错误，未写入未经核实的榜单内容。", link: "" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·X",
+        items: [
+          { t: "【第1】Ryan Clark", s: "Trends24抓取的美国X趋势榜第1，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=Ryan%20Clark" },
+          { t: "【第2】#WWERaw", s: "Trends24抓取的美国X趋势榜第2，话题围绕WWE Raw相关内容在当地趋势列表中上升。", link: "https://twitter.com/search?q=%23WWERaw" },
+          { t: "【第3】ESPN", s: "Trends24抓取的美国X趋势榜第3，体育媒体ESPN相关内容进入当地最新趋势列表。", link: "https://twitter.com/search?q=ESPN" },
+          { t: "【第4】#wildcardclub", s: "Trends24抓取的美国X趋势榜第4，相关标签进入当地最新趋势列表。", link: "https://twitter.com/search?q=%23wildcardclub" },
+          { t: "【第5】Bregman", s: "Trends24抓取的美国X趋势榜第5，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=Bregman" }
+        ]
+      }
+    ],
+    podcasts: [
+      { show: "What's Next｜科技早知道", title: "如何「兜住」一颗火箭？| S10E21", note: "本期围绕长征十号乙一子级海上网系捕获回收，讨论不同可回收火箭技术路线及商业航天的后续挑战。", audio: "https://aphid.fireside.fm/d/1437767933/4931937e-0184-4c61-a658-6b03c254754d/b66fdf0f-d428-4f0c-8412-b0c7581132d0.mp3", link: "https://guiguzaozhidao.fireside.fm/20240435" },
+      { show: "硅谷101", title: "E244｜机器人走错路了？与苏度韩铮聊聊具身智能的3D数据、路径分野与硅谷竞赛", note: "本期关注具身智能的3D数据、技术路径分歧与硅谷竞赛，讨论机器人发展中数据和模型路线的取舍。", audio: "https://aphid.fireside.fm/d/1437767933/f0f20376-8faf-4940-b920-84af6c734e2d/fc9a3737-81a9-49cf-a7d6-530c77df836e.mp3", link: "https://sv101.fireside.fm/257" }
+    ]
+  },
+  {
     date: "2026-07-19",
     weekday: "周日",
     news: [

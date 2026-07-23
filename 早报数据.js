@@ -4,6 +4,94 @@
    格式说明见 每日播报_操作规程.md。人物志由 人物志故事库.js 按日轮换，不在本文件。 */
 const DAILY_ARCHIVE = [
   {
+    date: "2026-07-22",
+    weekday: "周三",
+    news: [
+      {
+        cat: "🤖 AI 前沿",
+        items: [
+          { t: "IBM称AI并未终结大型机需求", s: "TechCrunch报道，IBM在大型机销售不及预期后表示，AI只是短期挤压企业硬件预算，并不意味着大型机业务被AI取代。", link: "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/" },
+          { t: "谷歌以云业务增长支撑AI投入", s: "TechCrunch报道，谷歌云业务因企业采用AI服务和AI基础设施而增长，公司借此解释其持续扩大的AI资本开支。", link: "https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/" },
+          { t: "OpenAI测试失误引发Hugging Face攻击复盘", s: "TechCrunch称，OpenAI隔离测试环境配置失误被安全专家认为是AI驱动攻击Hugging Face得以发生的重要原因。", link: "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/" },
+          { t: "百度文心助手任务Agent登顶榜单", s: "量子位报道，百度文心助手任务Agent在国际权威榜单中取得领先，相关成绩被用于展示国产智能体能力进展。", link: "https://www.qbitai.com/2026/07/457117.html" },
+          { t: "Halliday发布第二代AI眼镜", s: "量子位报道，Halliday G2通过Meeting Flow等能力把实时智能融入会议和商务沟通场景，AI眼镜继续向工作流参与演进。", link: "https://www.qbitai.com/2026/07/457049.html" },
+          { t: "机器人公司Atoms获17亿美元融资", s: "TechCrunch报道，Travis Kalanick旗下机器人公司Atoms完成17亿美元融资，由a16z领投，定位于工业AI与机器人结合。", link: "https://techcrunch.com/2026/07/22/travis-kalanicks-robotics-company-raises-1-7b-led-by-a16z/" }
+        ]
+      },
+      {
+        cat: "🇨🇳 中国",
+        items: [
+          { t: "小红书回应IPO受阻传闻", s: "36氪8点1氪援引报道称，小红书回应因前员工举报影响IPO的说法，称目前流传的IPO相关信息均不属实。", link: "https://36kr.com/p/3907461333144711?f=rss" },
+          { t: "拾玥科技获数千万元天使轮融资", s: "36氪报道，机器人灵巧操作方案商拾玥科技完成天使轮融资，资金将用于团队扩张、产品迭代和灵巧操作数据闭环。", link: "https://36kr.com/p/3907536767833473?f=rss" },
+          { t: "设序科技完成B轮超亿元融资", s: "36氪报道，工业AI设计研发解决方案商设序科技累计融资超3亿元，计划继续投入出海和核心模型技术研发。", link: "https://36kr.com/p/3907532622648453?f=rss" },
+          { t: "厦门翔安机场设计牵动金门讨论", s: "BBC中文报道，翔安机场设计中的金门连接构想引发当地居民复杂看法，既有发展期待，也有政治和安全顾虑。", link: "https://www.bbc.com/zhongwen/articles/cx25g733w65o/trad?at_medium=RSS&at_campaign=rss" }
+        ]
+      },
+      {
+        cat: "🇺🇸 美国·国际",
+        items: [
+          { t: "美国财政部威胁对AI模型争议采取制裁", s: "TechCrunch报道，白宫称Moonshot蒸馏Anthropic模型后，美国财政部发出制裁威胁，相关事件加剧美国对中国开源模型的争论。", link: "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/" },
+          { t: "乌克兰军方总司令遭革职", s: "BBC中文报道，乌克兰在连日抗议后解除军方总司令职务，相关人事变动发生在国防部高层调整引发反弹之后。", link: "https://www.bbc.com/zhongwen/articles/cx2vpjg3qlpo/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "TikTok直播带货在英国升温", s: "BBC中文报道，英国社群媒体直播购物正在加速进入日常消费，一些主播称单日销售额可达到较高水平。", link: "https://www.bbc.com/zhongwen/articles/cpw92ew1rw2o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "日本短裤上班政策引发性别争议", s: "BBC中文报道，东京Cool Biz政策鼓励男性穿短裤降温，但部分女性认为职场露腿期待和着装规则仍存在不公平。", link: "https://www.bbc.com/zhongwen/articles/c20dwywr8gxo/trad?at_medium=RSS&at_campaign=rss" }
+        ]
+      },
+      {
+        cat: "💰 财经",
+        items: [
+          { t: "耐克将终止滔搏线上经销权", s: "36氪8点1氪报道，耐克通知滔搏其中国内地在线平台销售将于2027年起终止，滔搏股价随消息大幅下跌。", link: "https://36kr.com/p/3907461333144711?f=rss" },
+          { t: "苹果拟推出设备租赁计划", s: "36氪8点1氪援引报道称，苹果准备推出Apple Upgrade租赁计划，初期至少覆盖美国市场和多数主力硬件品类。", link: "https://36kr.com/p/3907461333144711?f=rss" },
+          { t: "Kimi据称最快6个月内赴港上市", s: "36氪8点1氪援引媒体报道称，Kimi计划启动上市前融资，目标投前估值较高，最快6个月内登陆港股。", link: "https://36kr.com/p/3907461333144711?f=rss" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·知乎",
+        items: [
+          { t: "【第1】《功夫女足》被曝线上偷票房", s: "知乎热榜第1，话题围绕《功夫女足》线上渠道被偷票房超2000万元、全国偷漏占比较高的报道展开讨论。", link: "https://www.zhihu.com/question/2063269666466932392" },
+          { t: "【第2】小红书被曝联系老员工补发期权", s: "知乎热榜第2，讨论小红书是否以补偿换取前员工签署相关条款，以及该传闻对IPO进程的潜在影响。", link: "https://www.zhihu.com/question/2063292318887539352" },
+          { t: "【第3】西门庆为何非要杀武大", s: "知乎热榜第3，网友从《水浒传》人物关系、风险判断和叙事逻辑角度讨论这一经典情节。", link: "https://www.zhihu.com/question/2047419289150477897" },
+          { t: "【第4】《第九区》导演发布AI短片", s: "知乎热榜第4，话题关注尼尔·布洛姆坎普用字节Seedance 2.0生成13分钟AI短片及AI电影长片化可能。", link: "https://www.zhihu.com/question/2062918586486583714" },
+          { t: "【第5】胡歌和刘诗诗为何少上综艺", s: "知乎热榜第5，讨论演员曝光方式、作品路线和真人秀参与度之间的关系。", link: "https://www.zhihu.com/question/326219584" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·B站",
+        items: [
+          { t: "【第1】树恨你", s: "UP主鲤鱼Ace投稿，榜单抓取时播放量约677万，位列B站排行榜第1。", link: "https://www.bilibili.com/video/BV1h4KU66ENd" },
+          { t: "【第2】无骨草鱼教学", s: "UP主温柔雄鱼档发布无骨草鱼制作教学，榜单抓取时播放量约449万，位列B站排行榜第2。", link: "https://www.bilibili.com/video/BV1P6KA6NEDq" },
+          { t: "【第3】《梦战：剑之海》实机预告", s: "UP主梦战剑之海发布游戏首支实机预告，榜单抓取时播放量约461万，位列B站排行榜第3。", link: "https://www.bilibili.com/video/BV1AnKs6tE2n" },
+          { t: "【第4】差点被烟管单杀了", s: "UP主-大大大大古投稿，榜单抓取时播放量约324万，位列B站排行榜第4。", link: "https://www.bilibili.com/video/BV11oK16pEEz" },
+          { t: "【第5】千万博主谈B站真相", s: "UP主逗比的雀巢发布博主分析主题视频，榜单抓取时播放量约384万，位列B站排行榜第5。", link: "https://www.bilibili.com/video/BV1oiKm6yEYU" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·抖音",
+        items: [
+          { t: "【第1】我的夏日主线任务online", s: "抖音热榜第1，抓取时热度约1166万，话题围绕用户分享夏日生活主线任务展开。", link: "https://www.douyin.com/search/%E6%88%91%E7%9A%84%E5%A4%8F%E6%97%A5%E4%B8%BB%E7%BA%BF%E4%BB%BB%E5%8A%A1online" },
+          { t: "【第2】今年菲尔兹奖候选人都在研究啥", s: "抖音热榜第2，抓取时热度约1160万，话题关注菲尔兹奖候选人的数学研究方向。", link: "https://www.douyin.com/search/%E4%BB%8A%E5%B9%B4%E8%8F%B2%E5%B0%94%E5%85%B9%E5%A5%96%E5%80%99%E9%80%89%E4%BA%BA%E9%83%BD%E5%9C%A8%E7%A0%94%E7%A9%B6%E5%95%A5" },
+          { t: "【第3】引力一号一箭九星发射", s: "抖音热榜第3，抓取时热度约1131万，话题关注引力一号火箭一箭九星发射动态。", link: "https://www.douyin.com/search/%E5%BC%95%E5%8A%9B%E4%B8%80%E5%8F%B7%E4%B8%80%E7%AE%AD%E4%B9%9D%E6%98%9F%E5%8F%91%E5%B0%84" },
+          { t: "【第4】当我在暑假和crush表白成功后", s: "抖音热榜第4，抓取时热度约1131万，属于暑期情感与生活分享类热门话题。", link: "https://www.douyin.com/search/%E5%BD%93%E6%88%91%E5%9C%A8%E6%9A%91%E5%81%87%E5%92%8Ccrush%E8%A1%A8%E7%99%BD%E6%88%90%E5%8A%9F%E5%90%8E" },
+          { t: "【第5】这届非遗手作太好玩了", s: "抖音热榜第5，抓取时热度约1049万，话题集中在非遗手作体验和传统技艺传播。", link: "https://www.douyin.com/search/%E8%BF%99%E5%B1%8A%E9%9D%9E%E9%81%97%E6%89%8B%E4%BD%9C%E5%A4%AA%E5%A5%BD%E7%8E%A9%E4%BA%86" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·X",
+        items: [
+          { t: "【第1】NDAA", s: "Trends24抓取的美国X趋势榜第1，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=NDAA" },
+          { t: "【第2】Clayface", s: "Trends24抓取的美国X趋势榜第2，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=Clayface" },
+          { t: "【第3】Saudi Arabia", s: "Trends24抓取的美国X趋势榜第3，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=Saudi%20Arabia" },
+          { t: "【第4】Wemby", s: "Trends24抓取的美国X趋势榜第4，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=Wemby" },
+          { t: "【第5】Phee", s: "Trends24抓取的美国X趋势榜第5，相关词条进入当地最新趋势列表。", link: "https://twitter.com/search?q=Phee" }
+        ]
+      }
+    ],
+    podcasts: [
+      { show: "What's Next｜科技早知道", title: "可以给你的 Agent 发一点零花钱了 | S10E22", note: "本期围绕Agent支付、授权和执行能力展开，讨论智能体从回答问题走向真实行动时需要的基础设施。", audio: "https://aphid.fireside.fm/d/1437767933/4931937e-0184-4c61-a658-6b03c254754d/9a652c19-ceb3-46c2-87b4-bca36e684311.mp3", link: "https://guiguzaozhidao.fireside.fm/20240436" },
+      { show: "硅谷101", title: "E244｜机器人走错路了？与苏度韩铮聊聊具身智能的3D数据、路径分野与硅谷竞赛", note: "节目讨论具身智能中的3D数据、技术路线分野和硅谷竞争态势，关注机器人产业下一阶段落地问题。", audio: "https://aphid.fireside.fm/d/1437767933/f0f20376-8faf-4940-b920-84af6c734e2d/fc9a3737-81a9-49cf-a7d6-530c77df836e.mp3", link: "https://sv101.fireside.fm/257" },
+      { show: "疯投圈", title: "142 ✪ 产品体验学日本、全球营销学韩国", note: "本期分享日本体验经济考察和韩国全球营销观察，讨论线下体验、IP模式和入境游消费机会。", audio: "https://rio.xyzcdn.net/crazycapital/ep142.mp3", link: "https://crazy.capital/142" }
+    ]
+  },
+  {
     date: "2026-07-21",
     weekday: "周二",
     news: [

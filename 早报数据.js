@@ -4,6 +4,99 @@
    格式说明见 每日播报_操作规程.md。人物志由 人物志故事库.js 按日轮换，不在本文件。 */
 const DAILY_ARCHIVE = [
   {
+    date: "2026-07-25",
+    weekday: "周六",
+    lead: {
+      title: "Anthropic发布Claude Opus 5：把旗舰能力下放到日常模型",
+      link: "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/",
+      body: "Anthropic在7月24日发布Claude Opus 5，定位为新一代重量级模型。TechCrunch称，它距离Opus 4.8上线仅约2个月，价格和使用限制都低于Fable 5，却在公告列出的部分基准上超过Fable 5。Anthropic强调，Opus 5更擅长验证自身工作、反复迭代直到成功，示例包括在提示不完整时自行写出计算机视觉流水线。\nThe Verge补充，Anthropic把Opus 5推给企业客户，主打知识工作、复杂编码和生物相关任务；Fable 5仍保留给长周期Agent等最激进场景。背景是Fable 5此前因安全争议与美国政府反复沟通，OpenAI的GPT-5.6也曾经历约2周、仅面向政府批准实体的有限预览。\n最值得注意的是，Anthropic没有只讲更强，而是反复强调安全边界：公司称Opus 5比Opus 4.8具备更强网络安全防护，是“最对齐的Opus模型”。这说明前沿模型竞争正在从单纯参数和榜单，转向能力、价格、可用限制和监管可接受度的组合赛。",
+      why: "对中国AI读者来说，Opus 5显示海外大模型正把高端能力做成更便宜、更日常的企业工具，国产模型也会被迫同时卷性能、成本和安全叙事。",
+      sources: [
+        { name: "TechCrunch", link: "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/" },
+        { name: "The Verge", link: "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release" },
+        { name: "OpenAI Community", link: "https://community.openai.com/t/chatgpt-voice-is-now-in-the-desktop-app/1388031" }
+      ]
+    },
+    news: [
+      {
+        cat: "🤖 AI 前沿",
+        items: [
+          { t: "Vivix发布实时交互多模态模型A1", s: "量子位报道，Vivix A1拥有近30B激活参数，单卡突破10000 video tokens/s，最短300毫秒响应新输入，平均0.6秒出现画面反应，主打像视频通话一样驱动虚拟角色实时行动。", w: "视频生成从短片走向实时交互，门槛变化很关键。", link: "https://www.qbitai.com/2026/07/460174.html" },
+          { t: "国产世界模型登顶WorldScore榜单", s: "兔展智能联合北大、鹏城实验室推出UniWorld-View，适配国产昇腾算力，代码和权重全部开源；模型支持单图3D与视频4D生成，还能按指定相机轨迹做360度新视角视频。", w: "世界模型开始拼几何一致性，不只是拼画面好看。", link: "https://www.qbitai.com/2026/07/460041.html" },
+          { t: "Reid Hoffman等筹建AI实验室Prentis", s: "TechCrunch称，Reid Hoffman与Mark Pincus共同创办的新AI实验室Prentis正洽谈约1亿美元融资，团队试图在大模型应用和新型交互方向切入，但仍处早期募资阶段。", w: "明星创业者继续涌入AI，资金会推高应用层竞争。", link: "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/" },
+          { t: "OpenAI语音模式进入ChatGPT桌面端", s: "TechCrunch 7月24日报道，ChatGPT Voice已进入桌面应用，可与ChatGPT Work和Codex协同完成任务；OpenAI社区公告称其由GPT-Live驱动，并向Plus、Pro、Business、Edu、Enterprise等计划全球推出。", w: "语音正在变成调度Agent的入口，而非聊天玩具。", link: "https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/" },
+          { t: "Midjourney收购占星应用Co-Star", s: "The Verge 7月24日报道，Midjourney收购了占星应用Co-Star；这家公司此前以AI图像生成出圈，此次并购把用户社区、个性化内容和生成式视觉产品放到同一条增长线上。", w: "AI内容产品开始买社区入口，分发比模型更稀缺。", link: "https://www.theverge.com/ai-artificial-intelligence/970894/midjourney-co-star-acquisition" }
+        ]
+      },
+      {
+        cat: "🇨🇳 中国",
+        items: [
+          { t: "中国两名学者首获菲尔兹奖", s: "BBC中文报道，王虹和邓煜与另外2名学者同获菲尔兹奖，每人获1.5万加元奖金；王虹35岁，是史上第3位获奖女性，邓煜37岁，两人均破解超过百年的数学难题。", link: "https://www.bbc.com/zhongwen/articles/c86npjqxpx9o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "商务部将14家欧盟实体列入管控名单", s: "商务部7月24日发布2026年第30号公告，将拉法特集团等14家欧盟实体列入出口管制管控名单，禁止向其出口两用物项，特殊情况需由出口经营者提出申请。", link: "https://www.mofcom.gov.cn/zwgk/zcfb/art/2026/art_2c9a32aa73bf4f5ea80ffa83e62fb259.html" },
+          { t: "小鹏召回33473辆X9汽车", s: "中新经纬援引市监总局消息，小鹏自2026年8月28日起召回2023年8月8日至2025年8月11日生产的33473辆X9，原因是前空气弹簧气密性下降，极端情况下影响操控。", link: "https://www.jwview.com/jingwei/html/07-24/680794.shtml" },
+          { t: "国家反诈中心App支持AI内容鉴定", s: "中国网报道，公安部介绍国家反诈中心App已布建人工智能内容鉴定功能，用户可上传可疑视频、语音、图片；今年上半年公安机关侦办AI生成网络谣言案件170余起。", link: "https://news.china.com.cn/2026-07/24/content_118616036.html" }
+        ]
+      },
+      {
+        cat: "🇺🇸 美国·国际",
+        items: [
+          { t: "曼德海峡威胁引发红海航运担忧", s: "BBC中文报道，胡塞武装威胁对沙特实施曼德海峡海上禁运；该海峡宽约36公里，全球约12%的海运石油经此通过，红海走廊还承担约四分之一海上交通。", link: "https://www.bbc.com/zhongwen/articles/c4g63djrgy8o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "美国新关税影响60个贸易伙伴", s: "BBC中文报道，美国以强迫劳动为由推出新关税措施，影响中国、台湾等60个贸易伙伴；该议题把供应链合规、劳工审查和贸易摩擦重新推到跨境企业面前。", link: "https://www.bbc.com/zhongwen/articles/clyezy3l60qo/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "Meta暂停智能眼镜限流收费计划", s: "The Verge报道，Meta暂停对智能眼镜听清语音功能实施限流的计划；争议焦点在于该能力本地运行，却曾计划向用户收取每月20美元订阅费。", link: "https://www.theverge.com/tech/970970/after-backlash-meta-pauses-plan-to-rate-limit-its-smart-glasses" },
+          { t: "白宫记者晚宴延期后重办", s: "AP报道，2026年白宫记者协会晚宴在4月安全事件后改期举行，约700名宾客参加；特朗普发表超过1小时讲话，现场同时向受伤特勤人员和获奖记者致意。", link: "https://apnews.com/article/dfa0ecdbe3552910903d5c23a8e96a35" }
+        ]
+      },
+      {
+        cat: "💰 财经",
+        items: [
+          { t: "携程因垄断被罚没51.79亿元", s: "科技日报报道，市场监管总局责令携程停止违法行为，退还酒店经营者订单储备金1.22亿元，没收违法所得16.58亿元，并按2025年境内销售额469.58亿元的7.5%罚款35.21亿元。", link: "https://www.stdaily.com/web/gdxw/2026-07/25/content_553516.html" },
+          { t: "欧盟对谷歌罚款8.9亿欧元", s: "新华社报道，欧盟委员会7月23日认定谷歌违反《数字市场法》，对其搜索和应用商店业务共罚8.9亿欧元，并要求谷歌在60天内完成整改，否则可能追加罚款。", link: "https://app.xinhuanet.com/news/article.html?articleId=20260723d0047f0adb51446cb4e02b69f477d4b7" },
+          { t: "Roku硬件最高涨价50美元", s: "The Verge报道，Roku上调全线流媒体硬件价格，HD Streaming Stick从29.99美元涨至39.99美元，部分设备涨幅高达50美元；公司把原因归于预计持续到2027年的内存短缺。", link: "https://www.theverge.com/streaming/970814/roku-streaming-price-increase" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·知乎",
+        items: [
+          { t: "【第1】携程垄断被罚没51.79亿元", s: "知乎热榜第1，抓取时约3870万热度，网友主要讨论平台流量分配、酒店独家合作和51.79亿元罚没对在线旅游行业的警示。", link: "https://www.zhihu.com/question/2064289475916560100" },
+          { t: "【第2】商务部管控14家欧盟实体", s: "知乎热榜第2，抓取时约1257万热度，讨论出口管制名单、两用物项限制和中欧经贸安全边界。", link: "https://www.zhihu.com/question/2064019046736175900" },
+          { t: "【第3】小鹏X9召回33473辆", s: "知乎热榜第3，抓取时约482万热度，车主围绕空气弹簧漏气、3万公里后故障和召回维修流程展开争论。", link: "https://www.zhihu.com/question/2064072658795419100" },
+          { t: "【第4】Kimi K3参数量达2.8万亿", s: "知乎热榜第4，抓取时约387万热度，讨论杨植麟团队Kimi K3的2.8万亿参数、年轻成员和中国开源模型路线。", link: "https://www.zhihu.com/question/2063822441583993600" },
+          { t: "【第5】五人分1亿元如何分配", s: "知乎热榜第5，抓取时约386万热度，网友把1亿元分配题拆成博弈论、谈判心理和否决权设计问题。", link: "https://www.zhihu.com/question/2063192386587644400" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·B站",
+        items: [
+          { t: "【第1】世界上五种特色调式音阶", s: "UP主火星课堂i投稿，榜单抓取时播放量约399万、点赞约52.7万，用几何图形呈现5种特色调式音阶，位列B站排行榜第1。", link: "https://www.bilibili.com/video/BV1KLg66DEi2" },
+          { t: "【第2】我婚礼上要放这个", s: "UP主Vinheteiro投稿，榜单抓取时播放量约532万、点赞约54.8万，以演奏和婚礼场景反差制造传播点，位列B站排行榜第2。", link: "https://www.bilibili.com/video/BV1n9gC6HEzP" },
+          { t: "【第3】《下一个是谁》第七季（2）", s: "UP主自来卷三木投稿，榜单抓取时播放量约198万、点赞约24.8万，系列内容继续更新，位列B站排行榜第3。", link: "https://www.bilibili.com/video/BV1KRg462E53" },
+          { t: "【第4】星穹铁道×Fate联动PV", s: "UP主崩坏星穹铁道发布联动PV，榜单抓取时播放量约344万、点赞约24.6万，围绕Fate[UBW]联动预热，位列B站排行榜第4。", link: "https://www.bilibili.com/video/BV1ThgD6nEie" },
+          { t: "【第5】《梦战：剑之海》实机预告", s: "UP主梦战剑之海发布首支实机预告，榜单抓取时播放量约468万、点赞约37.0万，同时开启全球首测招募，位列B站排行榜第5。", link: "https://www.bilibili.com/video/BV1AnKs6tE2n" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·抖音",
+        items: [
+          { t: "今日抓取失败", s: "抖音热榜接口在今天抓取时连续出现TLS连接失败，备用聚合接口同样未能返回可解析榜单；按规程不编造排名。", link: "" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·X",
+        items: [
+          { t: "【第1】LeBron", s: "Trends24美国榜出现LeBron；当天美国体育媒体集中报道41岁LeBron James自由市场动向，Topps还抢先发布其加盟76人的消息。", link: "https://twitter.com/search?q=LeBron" },
+          { t: "【第2】Starship", s: "Starship因SpaceX第13次试飞登上趋势；AP称该任务部署20颗新一代Starlink卫星，飞船在印度洋保持完整溅落，但助推器未能软着陆。", link: "https://twitter.com/search?q=Starship" },
+          { t: "【第3】#SmackDown", s: "#SmackDown热度来自7月24日WWE节目，Cody Rhodes与CM Punk为SummerSlam继续升温，Nikki Bella回归，多个新赛事安排确认。", link: "https://twitter.com/search?q=%23SmackDown" },
+          { t: "【第4】Azzi", s: "Azzi Fudd赢得2026年WNBA三分大赛引发讨论；她决赛拿到30分，成为首位夺冠的新秀和首位获该奖的UConn校友。", link: "https://twitter.com/search?q=Azzi" },
+          { t: "【第5】White House Correspondents", s: "白宫记者协会晚宴延期后于7月24日举行，约700人参加；特朗普发表超过1小时讲话，安全和新闻自由议题同步成为讨论焦点。", link: "https://twitter.com/search?q=White%20House%20Correspondents" }
+        ]
+      }
+    ],
+    podcasts: [
+      { show: "What's Next｜科技早知道", title: "可以给你的 Agent 发一点零花钱了 | S10E22", note: "本期围绕Agent支付、授权和执行能力展开，讨论智能体从回答问题走向真实行动时需要的基础设施。", audio: "https://aphid.fireside.fm/d/1437767933/4931937e-0184-4c61-a658-6b03c254754d/9a652c19-ceb3-46c2-87b4-bca36e684311.mp3", link: "https://guiguzaozhidao.fireside.fm/20240436" },
+      { show: "疯投圈", title: "142 ✪ 产品体验学日本、全球营销学韩国", note: "本期分享日本体验经济考察和韩国全球营销观察，讨论线下体验、IP模式和入境游消费机会。", audio: "https://rio.xyzcdn.net/crazycapital/ep142.mp3", link: "https://crazy.capital/142" }
+    ]
+  },
+  {
     date: "2026-07-22",
     weekday: "周三",
     news: [

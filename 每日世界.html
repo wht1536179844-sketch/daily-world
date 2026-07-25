@@ -53,6 +53,28 @@
   .news-item .t a:hover { color: var(--main); }
   .news-item .s { font-size: 13.5px; color: #66788f; margin-top: 4px; line-height: 1.7; }
 
+  /* 今日头条深读 */
+  .lead-card { border-top: 4px solid var(--accent); }
+  .lead-card .l-tag {
+    display: inline-block; background: #fff0e6; color: var(--accent);
+    font-size: 12px; font-weight: bold; border-radius: 6px; padding: 3px 10px; margin-bottom: 10px;
+  }
+  .lead-card .l-title { font-size: 20px; font-weight: bold; line-height: 1.45; }
+  .lead-card .l-title a { color: var(--text); text-decoration: none; }
+  .lead-card .l-title a:hover { color: var(--accent); }
+  .lead-card .l-body { font-size: 15px; line-height: 1.95; margin-top: 12px; }
+  .lead-card .l-body p { margin-bottom: 10px; }
+  .lead-card .l-why {
+    font-size: 14px; line-height: 1.8; margin-top: 12px; padding: 10px 14px;
+    background: #fff7f0; border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
+  }
+  .lead-card .l-why b { color: var(--accent); }
+  .lead-card .l-src { font-size: 12.5px; color: #98a6bb; margin-top: 12px; }
+  .lead-card .l-src a { color: #7b8aa5; }
+
+  /* 条目点评 */
+  .news-item .w { font-size: 13px; color: var(--accent); margin-top: 5px; line-height: 1.6; }
+
   .figure-card { border-top: 4px solid var(--accent); }
   .figure-card .f-tag {
     display: inline-block; background: #fff0e6; color: var(--accent);
@@ -110,12 +132,32 @@ function show(idx) {
   document.getElementById("wdText").textContent = d.weekday || "";
   let html = "";
 
+  if (d.lead && d.lead.title) {
+    const L = d.lead;
+    html += '<div class="card lead-card"><span class="l-tag">🔍 今日头条深读</span>' +
+      '<div class="l-title">' +
+      (L.link ? '<a href="' + esc(L.link) + '" target="_blank" rel="noopener">' + esc(L.title) + ' ↗</a>' : esc(L.title)) +
+      '</div>';
+    if (L.body) {
+      html += '<div class="l-body">' +
+        String(L.body).split("\n").filter(p => p.trim()).map(p => '<p>' + esc(p) + '</p>').join("") +
+        '</div>';
+    }
+    if (L.why) html += '<div class="l-why"><b>意味着什么：</b>' + esc(L.why) + '</div>';
+    if (L.sources && L.sources.length) {
+      html += '<div class="l-src">来源：' + L.sources.map(s =>
+        '<a href="' + esc(s.link) + '" target="_blank" rel="noopener">' + esc(s.name) + '</a>').join(" · ") + '</div>';
+    }
+    html += '</div>';
+  }
+
   (d.news || []).forEach(sec => {
     html += '<div class="card"><div class="cat-title">' + esc(sec.cat) + '</div>';
     (sec.items || []).forEach(it => {
       html += '<div class="news-item"><div class="t">' +
         (it.link ? '<a href="' + esc(it.link) + '" target="_blank" rel="noopener">' + esc(it.t) + ' ↗</a>' : esc(it.t)) +
-        '</div>' + (it.s ? '<div class="s">' + esc(it.s) + '</div>' : '') + '</div>';
+        '</div>' + (it.s ? '<div class="s">' + esc(it.s) + '</div>' : '') +
+        (it.w ? '<div class="w">▸ ' + esc(it.w) + '</div>' : '') + '</div>';
     });
     html += '</div>';
   });

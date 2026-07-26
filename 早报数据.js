@@ -4,6 +4,105 @@
    格式说明见 每日播报_操作规程.md。人物志由 人物志故事库.js 按日轮换，不在本文件。 */
 const DAILY_ARCHIVE = [
   {
+    date: "2026-07-26",
+    weekday: "周日",
+    lead: {
+      title: "RSS 2026现场提醒：具身智能还没到“路线定论”时刻",
+      link: "https://www.qbitai.com/2026/07/460542.html",
+      body: "量子位在7月25日的RSS 2026现场报道里，把具身智能的热词争论拉回了具体问题：会议1月30日截稿、4月27日录用、7月13日开会，顶会论文天然滞后约5个半月，因此会场上仍有大量VLA与模仿学习讨论。Physical Intelligence相关受访者强调，VLA和世界模型并不冲突，π0.7也引入了世界模型组件。\n背景是国内过去半年频繁把世界模型视为机器人新答案，但PI的π0.7论文和博客仍把“steerable”放在核心位置：模型用语言、元数据、控制模态和视觉子目标来约束动作，而不是只靠生成未来画面。EgoVerse论文则给出另一条证据链：其数据集包含1362小时、8万段人类示范、1965个任务和2087名示范者，结论不是数据越多越好，而是人类数据与机器人任务目标是否对齐。\n容易被忽略的细节是，Karen Liu团队的VLK选择用3D Gaussian Splatting重建室内场景，自动合成4.8万条视觉、语言和全身运动学轨迹，再迁移到Unitree G1。这说明具身智能竞争不只是“VLA还是世界模型”，更像是数据配方、仿真资产、硬件形态和真实动作监督的系统工程。",
+      why: "对中国AI读者来说，这意味着国产机器人硬件优势很重要，但真正拉开差距的可能是数据闭环和系统工程，而不是追一个单一路线标签。",
+      sources: [
+        { name: "量子位", link: "https://www.qbitai.com/2026/07/460542.html" },
+        { name: "Physical Intelligence", link: "https://www.pi.website/blog/pi07" },
+        { name: "EgoVerse", link: "https://arxiv.org/abs/2604.07607" },
+        { name: "VLK", link: "https://vision-language-kinematics.github.io/" }
+      ]
+    },
+    news: [
+      {
+        cat: "🤖 AI 前沿",
+        items: [
+          { t: "吴恩达开源个人桌面Agent", s: "量子位7月25日报道，吴恩达团队发布100%开源的个人桌面Agent，面向本地电脑自动执行办公与浏览器任务；项目把代码、模型调用和操作日志开放，适合开发者复现端侧Agent工作流。", w: "个人Agent从云端走向桌面，开源会加快工具链迭代。", link: "https://www.qbitai.com/2026/07/460892.html" },
+          { t: "Monday.com加入AI裁员名单", s: "TechCrunch 7月26日整理称，Monday.com成为最新把裁员与AI效率提升挂钩的科技公司；该追踪清单已累计列出20家在2026年公开提到AI因素的雇主。", w: "AI替代开始进入公司公告，影响不只停在演示层。", link: "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/" },
+          { t: "美国图书馆办“避开AI”工作坊走红", s: "TechCrunch 7月25日报道，美国多地图书馆的“Avoiding AI”工作坊在社交平台走红，面向不想被大科技产品默认接入AI的用户，课程重点是搜索、写作和隐私设置。", w: "AI普及越快，反向需求也越清晰，产品默认值会被审视。", link: "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/" },
+          { t: "AI数据中心扰动电网问题升温", s: "TechCrunch 7月25日报道，一次输电线故障暴露AI数据中心负载波动风险；ON.Energy称正为4个数据中心园区安装合计3吉瓦电池系统，PJM同类断开事件已比2024年1.5吉瓦规模翻倍。", w: "算力扩张开始受电网约束，基础设施会决定模型速度。", link: "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/" },
+          { t: "眸深智能完成Pre-A轮融资", s: "36氪7月26日报道，端侧具身大脑公司眸深智能完成近亿元Pre-A轮追加融资；团队由复旦教授、前英特尔首席科学家等参与，方向是机器人本体上的视觉、控制和端侧推理。", w: "端侧机器人脑是国产具身落地的关键赛道。", link: "https://36kr.com/p/3911162147640456?f=rss" }
+        ]
+      },
+      {
+        cat: "🇨🇳 中国",
+        items: [
+          { t: "台风“红霞”凌晨登陆广东惠州", s: "中央气象台消息，今年第12号台风“红霞”7月26日3时50分前后在广东惠州市惠东县平海镇登陆，登陆时中心最大风力14级、45米/秒，中心最低气压955百帕。", link: "https://www.cnr.cn/newscenter/kuaixun/20260726/t20260726_527729900.shtml" },
+          { t: "中国两名学者首获菲尔兹奖", s: "BBC中文7月25日报道，王虹和邓煜与另外2名学者同获菲尔兹奖；王虹35岁，是史上第3位获奖女性，邓煜37岁，两人研究都指向超过百年的数学难题。", link: "https://www.bbc.com/zhongwen/articles/c86npjqxpx9o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "国家反诈中心App上线AI内容鉴定", s: "36氪7月25日早报提到，国家反诈中心App已支持一键检测AI生成痕迹；公安部此前披露，今年上半年已侦办AI生成网络谣言案件170余起。", link: "https://36kr.com/p/3910351337821318?f=rss" },
+          { t: "电影《三国第一部：争洛阳》上映16天撤档", s: "新浪财经援引观察者网消息，《三国第一部：争洛阳》截至7月25日上映16天，票房8146.5万元，当日排片占比仅0.8%；片方此前7月17日曾推出不好看可退票措施。", link: "https://finance.sina.com.cn/roll/2026-07-25/doc-iniizrew9013913.shtml" }
+        ]
+      },
+      {
+        cat: "🇺🇸 美国·国际",
+        items: [
+          { t: "美国小企业起诉特朗普新关税", s: "AP 7月26日报道，美国小企业已提起2起诉讼，挑战对60个国家进口商品征收两位数税率的新关税；争议焦点是政府是否能用1974年贸易法301条款覆盖约99%美国进口。", link: "https://apnews.com/article/fd55d81461c38892a03c322bfcc46e95" },
+          { t: "Ryan Gosling将出演漫威Ghost Rider", s: "AP 7月26日报道，Ryan Gosling将在漫威电影宇宙出演Ghost Rider，并与导演Shawn Levy合作；该片计划2028年上映，圣迭戈动漫展现场约7000名观众见证发布。", link: "https://apnews.com/article/35f4476d32fdd55acc7bcbe608a8e2d2" },
+          { t: "《黑豹3》确定新主演", s: "Entertainment Weekly 7月26日报道，Ryan Coogler在SDCC 2026宣布David Jonsson参演《Black Panther 3》，影片计划2028年12月15日上映，延续《Wakanda Forever》留下的T'Challa之子线索。", link: "https://ew.com/ryan-coogler-announces-new-black-panther-star-for-third-movie-12026998" },
+          { t: "美国经济周报聚焦油价和房贷", s: "AP 7月25日梳理称，美国汽油均价升至每加仑4.11美元以上，30年期按揭利率升至6.58%，同时上周初请失业金人数降至18.7万，显示家庭成本和劳动力市场走势分化。", link: "https://apnews.com/article/78432a0b6870a29f63ccf64adfab0c0b" }
+        ]
+      },
+      {
+        cat: "💰 财经",
+        items: [
+          { t: "特朗普新关税覆盖60个经济体", s: "AP 7月25日报道，美国7月24日宣布对60个经济体加征10%至12.5%关税，理由是强迫劳动执法不足；这些措施覆盖约99%的美国进口，并取代刚到期的10%全球关税。", link: "https://apnews.com/article/160b5c76b005a5d703cdcc4644f7cdc9" },
+          { t: "美股周线承压，油价冲高后回落", s: "AP 7月24日数据称，标普500收于7411.98点、道指51947.25点，纳指报24975.82点；布伦特原油前一日触及102美元后回落至96.78美元，主要指数本周均收跌。", link: "https://apnews.com/article/02d01b8f38ccd51f605c4414cdd4fa9b" },
+          { t: "疯投圈讨论体验经济出海", s: "疯投圈7月10日更新第142期，复盘日本考察中的体验经济案例，包括东京迪士尼储物柜每年约5000万元人民币收入，讨论中国消费企业如何承接入境游新增量。", link: "https://crazy.capital/142" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·知乎",
+        items: [
+          { t: "【第1】台风“红霞”登陆广东惠州", s: "知乎热榜第1，抓取时约1228万热度；网友主要关注3时50分登陆、14级风力、45米/秒风速，以及广东、江西、湖南等地后续降雨影响。", link: "https://www.zhihu.com/question/2062972309652992711" },
+          { t: "【第2】《三国第一部：争洛阳》撤档", s: "知乎热榜第2，抓取时约294万热度；讨论点集中在上映16天票房未破亿、撤档能否补救口碑，以及历史大片是否仍能靠IP吸引观众。", link: "https://www.zhihu.com/question/2064445264405050834" },
+          { t: "【第3】为什么减肥常说少吃米面馒头", s: "知乎热榜第3，抓取时约286万热度；回答围绕精制碳水、总热量缺口、血糖波动和中国家庭主食结构展开争论。", link: "https://www.zhihu.com/question/2057049665552623029" },
+          { t: "【第4】洞洞鞋、勃肯鞋接班凉鞋", s: "知乎热榜第4，抓取时约206万热度；网友把鞋类变化和通勤舒适、户外风、懒人穿搭及年轻人消费审美联系起来。", link: "https://www.zhihu.com/question/2062144078456648299" },
+          { t: "【第5】凡人修仙传导演骂网友争议", s: "知乎热榜第5，抓取时约184万热度；争论集中在动画改编节奏、主创回应边界和长篇IP粉丝对细节还原的要求。", link: "https://www.zhihu.com/question/2064287361543017092" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·B站",
+        items: [
+          { t: "【第1】极客湾手机续航大横评", s: "UP主极客湾Geekerwan，抓取时播放约56.3万、点赞约10.1万；视频自购78台零售手机，用AI Agent 5.0标准测试续航和电池锁容。", link: "https://www.bilibili.com/video/BV1LR336sEFX" },
+          { t: "【第2】MC动画：于是，我们的故事开始了", s: "UP主Minecraft动画电影同好会，抓取时播放约56.4万、点赞约9.4万；Blender制作的MC动画在热门榜第2，观众主要讨论制作完成度。", link: "https://www.bilibili.com/video/BV1fNN46HE9w" },
+          { t: "【第3】凡人修仙传之慕兰之战第8集", s: "UP主哔哩哔哩国创，抓取时播放约568.9万、点赞约16.0万；总第184集继续每周六11点更新，弹幕讨论剧情推进。", link: "https://www.bilibili.com/video/BV19agi6pE4X" },
+          { t: "【第4】陈翔六点半新短剧", s: "UP主陈翔六点半，抓取时播放约615.3万、点赞约27.1万；标题为“有人在这里被爱过，有人在这里学会了爱”，延续短剧叙事。", link: "https://www.bilibili.com/video/BV1yagv6eE25" },
+          { t: "【第5】明日方舟EP酸橙色信笺", s: "UP主明日方舟，抓取时播放约57.1万、点赞约9.2万；EP预告7月28日18点上架各音乐平台，粉丝集中讨论安洁莉娜夏日影像。", link: "https://www.bilibili.com/video/BV1nB3u6tEHD" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·抖音",
+        items: [
+          { t: "【第1】台风红霞最新路径", s: "抖音热榜第1，抓取时热度约1154万；用户关注台风登陆后的北上路径、广东沿海风雨和后续是否影响江西、湖南、湖北。", link: "" },
+          { t: "【第2】台风红霞登陆广东", s: "抖音热榜第2，抓取时热度约1145万；短视频集中呈现惠州登陆、深圳大风和沿海渔船避风现场。", link: "" },
+          { t: "【第3】海上“超级心脏”就位", s: "抖音热榜第3，抓取时热度约1137万；话题围绕大型海工装备或能源平台关键设备安装，网友关注国产装备规模和海上施工难度。", link: "" },
+          { t: "【第4】复盘一周穿搭思路", s: "抖音热榜第4，抓取时热度约1128万；内容以夏季通勤、周末出行和基础款搭配为主，评论区讨论低成本穿搭和身材适配。", link: "" },
+          { t: "【第5】初中生也能看懂的挂谷猜想解析", s: "抖音热榜第5，抓取时热度约1027万；数学科普借菲尔兹奖热度解释挂谷猜想，用户争论“看懂”和真正理解之间的差距。", link: "" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·X",
+        items: [
+          { t: "【第1】Shawn Levy", s: "Trends24美国榜第1；热度来自SDCC 2026漫威发布，Shawn Levy将执导Ryan Gosling主演的Ghost Rider，影片计划2028年上映。", link: "https://twitter.com/search?q=Shawn%20Levy" },
+          { t: "【第2】Ghost Rider", s: "Trends24美国榜第2；Ryan Gosling加入MCU出演Ghost Rider引发讨论，角色此前由Nicolas Cage在2007年和2012年电影中饰演。", link: "https://twitter.com/search?q=Ghost%20Rider" },
+          { t: "【第3】David Jonsson", s: "Trends24美国榜第3；Ryan Coogler宣布David Jonsson参演《Black Panther 3》，影片定档2028年12月15日，接续T'Challa之子设定。", link: "https://twitter.com/search?q=David%20Jonsson" },
+          { t: "【第4】Black Panther 3", s: "Trends24美国榜第4；SDCC现场确认第三部《黑豹》进展，粉丝围绕新黑豹人选、Chadwick Boseman遗产和Denzel Washington角色猜测讨论。", link: "https://twitter.com/search?q=Black%20Panther%203" },
+          { t: "【第5】#AEWCollision", s: "Trends24美国榜第5；7月25日AEW Collision在Nashville播出，为7月26日Redemption付费赛事预热，节目含8场比赛和梯子赛资格线索。", link: "https://twitter.com/search?q=%23AEWCollision" }
+        ]
+      }
+    ],
+    podcasts: [
+      { show: "硅谷101", title: "E245｜藏在大模型背后的新闻人：GPT们的回复是这样写出来的", note: "7月23日更新，讲大模型回答背后的新闻编辑、事实选择和信息组织机制。", audio: "https://aphid.fireside.fm/d/1437767933/f0f20376-8faf-4940-b920-84af6c734e2d/5aeaeb64-9165-4271-9884-23329b511e11.mp3", link: "https://sv101.fireside.fm/258" },
+      { show: "What's Next｜科技早知道", title: "可以给你的 Agent 发一点零花钱了 | S10E22", note: "7月22日更新，讨论Agent支付、授权和未来自动执行任务的产品边界。", audio: "https://aphid.fireside.fm/d/1437767933/4931937e-0184-4c61-a658-6b03c254754d/9a652c19-ceb3-46c2-87b4-bca36e684311.mp3", link: "https://guiguzaozhidao.fireside.fm/20240436" },
+      { show: "疯投圈", title: "142 ✪ 产品体验学日本、全球营销学韩国", note: "7月10日更新，从日本体验经济和韩国全球营销看消费品牌出海。", audio: "https://rio.xyzcdn.net/crazycapital/ep142.mp3", link: "https://crazy.capital/142" }
+    ]
+  },
+  {
     date: "2026-07-25",
     weekday: "周六",
     lead: {

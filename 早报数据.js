@@ -4,6 +4,105 @@
    格式说明见 每日播报_操作规程.md。人物志由 人物志故事库.js 按日轮换，不在本文件。 */
 const DAILY_ARCHIVE = [
   {
+    date: "2026-07-27",
+    weekday: "周一",
+    lead: {
+      title: "新智具身与复旦把“触觉”推到具身智能主战场",
+      link: "https://www.qbitai.com/2026/07/460962.html",
+      body: "新智具身 NeoteAI 与复旦大学可信具身智能研究院在7月26日连发 N0-Foundation、N0-VTLA、N0-TWAM 三份报告，核心不是再堆视觉模型，而是把触觉数据做成机器人训练底座。量子位报道提到，NeoData 包含超3万小时视觉-触觉交互数据、约140万条操作片段、33亿个时间步、80亿帧 RGB 画面和100亿帧触觉图像，覆盖6种机器人本体、450项真实长程任务，并已开源5000小时数据。\n背景是，过去一年具身智能的争论多集中在 VLA、世界模型和大模型规划，但真实操作里的失败常发生在“最后一厘米”：插头是否卡住、瓶身是否被夹瘪、毛巾松手会不会散开，这些信息摄像头很难稳定看见。N0-VTLA 选择预测未来50步触觉演变，在插插头任务上成功率85%，对比视觉方案60%；拔钥匙任务99%，对比视觉方案35%。这说明触觉不只是补充传感器，而可能改变策略学习方式。\n最值得注意的是 N0-TWAM 把未来视频、未来触觉和动作放进同一个世界-动作模型里，采用混合专家架构，总参数量72亿，约为全宽方案一半；其仿真平均成功率84.5%，真机8项任务平均成功率46.3%。同期 VT-WAM、Dream-Tac 等论文也在做触觉世界模型，说明机器人路线正在从“看懂世界”转向“看见、摸到并提前想象接触后果”。",
+      why: "对关注AI的中国读者来说，这条新闻说明具身智能的差距可能不只在模型参数，而在触觉数据、真机任务和失败样本闭环。",
+      sources: [
+        { name: "量子位", link: "https://www.qbitai.com/2026/07/460962.html" },
+        { name: "NeoteAI N0-VTLA", link: "https://research.neoteai.com/n0-vtla/" },
+        { name: "NeoteAI N0-TWAM", link: "https://research.neoteai.com/n0-twam/" },
+        { name: "N0-Foundation 报告", link: "https://research.neoteai.com/assets/n0-foundation-report.pdf" }
+      ]
+    },
+    news: [
+      {
+        cat: "🤖 AI 前沿",
+        items: [
+          { t: "Encord试验用脑电补机器人训练数据", s: "TechCrunch 7月26日报道，Encord在加州仓库让训练员戴脑电头显完成Jenga等操作，目标是把意图、错误和惊讶等脑波状态标注进机器人数据；合作方Zander Labs仍处试验阶段。", w: "物理AI瓶颈转向数据质量，脑电标注是新变量。", link: "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/" },
+          { t: "Kimi热度再引美国AI开放争论", s: "TechCrunch 7月26日称，月之暗面 Kimi 新模型让华盛顿重新争论中国开源模型；播客讨论把它与DeepSeek热潮对比，焦点是限制中国模型会保护安全还是只利好少数前沿实验室。", w: "中国模型被美国政策圈反复讨论，开源路线影响外溢。", link: "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/" },
+          { t: "Hugging Face要求OpenAI公开“失控Agent”轨迹", s: "TechCrunch 7月26日报道，Hugging Face CEO Clem Delangue要求OpenAI释放相关Agent运行轨迹，并投入1亿美元算力帮助社区建设网络防御；事件被称为首次自主Agent网络攻击。", w: "Agent安全从理论风险进入可审计事件，透明度会成争点。", link: "https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/" },
+          { t: "苹果智能眼镜押注隐私差异化", s: "The Verge 7月26日援引Mark Gurman称，苹果计划在明年WWDC展示首款智能眼镜，预计2027年底上市；相比Meta眼镜，苹果正在把隐私功能和提示机制作为关键卖点。", w: "AI硬件竞争不只拼摄像头，隐私体验会影响接受度。", link: "https://www.theverge.com/tech/971101/apple-smart-glasses-privacy" },
+          { t: "一小时训练可显著提高AI脸识别率", s: "BBC中文7月26日报道，ANU团队在PNAS研究中让45名成年人接受约1小时训练，AI脸识别准确率从41%提升到81%；德勤估算生成式AI诈骗明年仅美国损失可达400亿美元。", w: "AI内容鉴别正在变成普通用户的基础安全能力。", link: "https://www.bbc.com/zhongwen/articles/cedjl1vvjdyo/trad?at_medium=RSS&at_campaign=rss" }
+        ]
+      },
+      {
+        cat: "🇨🇳 中国",
+        items: [
+          { t: "“数字空间一号”试验星工程启动", s: "36氪7月27日报道，“数字空间一号”试验星工程7月26日在北京启动；低轨300至2000公里空间在50公里安全间距下最多约容纳17.5万颗卫星，项目要验证星上“感知-认知-行为”闭环。", link: "https://36kr.com/p/3912546487637378?f=rss" },
+          { t: "携程因垄断行为被罚没51.79亿元", s: "36氪7月27日早报称，市场监管总局7月25日对携程集团滥用市场支配地位作出处罚，罚没款合计51.79亿元；携程公告称接受处罚并将逐项整改。", link: "https://36kr.com/p/3913118530819457?f=rss" },
+          { t: "台风“红霞”登陆广东，逾71万人转移", s: "BBC中文7月26日报道，今年第12号台风“红霞”在广东东部沿海登陆，为今年以来登陆中国强度最大的台风；广东截至26日零时累计转移人员逾71.5万人。", link: "https://www.bbc.com/zhongwen/articles/cqx748q7zrwo/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "长鑫科技今日科创板上市", s: "36氪7月27日早报称，长鑫科技今日在上交所科创板上市，发行价8.66元/股、发行后总股本668.81亿股；研报给出1万亿至4.25万亿元市值情景。", link: "https://www.cs.com.cn/ssgs/gsxw/202607/t20260727_6493820.html" }
+        ]
+      },
+      {
+        cat: "🇺🇸 美国·国际",
+        items: [
+          { t: "柏林骄傲节袭击嫌疑人被警方击毙", s: "AP 7月26日报道，柏林骄傲节附近车辆冲撞和持刀袭击造成1死29伤；21岁嫌疑人Abdul Ballout在近24小时搜捕后于Spandau与警方交火身亡。", link: "https://apnews.com/article/3ba5e3f1becffd0da5f47b29aa08da9d" },
+          { t: "漫威确认Ryan Gosling出演Ghost Rider", s: "AP 7月26日报道，漫威在圣迭戈Comic-Con宣布Ryan Gosling加入MCU出演Ghost Rider，影片计划2028年上映；David Jonsson也确认出演2028年12月15日上映的《Black Panther 3》。", link: "https://apnews.com/article/35f4476d32fdd55acc7bcbe608a8e2d2" },
+          { t: "泰国是否配合中国跨境执法引争议", s: "BBC中文7月27日报道，人权组织关注至少4名在泰中国异议人士或媒体人去向；报道提到白兆东59岁、张信燕56岁，并回顾2015年逾100名维吾尔人被送返事件。", link: "https://www.bbc.com/zhongwen/articles/cx2594ne6g7o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "波加查环法总成绩夺冠", s: "AP 7月27日赛果显示，Tadej Pogacar以73小时56分26秒拿下环法总冠军，Remco Evenepoel落后6分26秒列第2，墨西哥车手Isaac del Toro落后9分42秒列第3。", link: "https://apnews.com/article/tour-de-france-general-news-cycling-674c318bb10faf3e81f745e0fdbe3efe" }
+        ]
+      },
+      {
+        cat: "💰 财经",
+        items: [
+          { t: "特朗普新关税遭小企业起诉", s: "AP 7月26日报道，美国小企业已提起2起诉讼，挑战对60个贸易伙伴征收10%至12.5%新关税；措施以强迫劳动执法为由，覆盖约99%的美国进口。", link: "https://apnews.com/article/fd55d81461c38892a03c322bfcc46e95" },
+          { t: "MORROR ART完成亿元级B+轮融资", s: "36氪7月27日报道，家居音频品牌MORROR ART完成亿元级B+轮融资；其海外子品牌MorningBlues的SonicGlass A1在Kickstarter众筹金额已突破120万美元。", link: "https://36kr.com/p/3910655616521348?f=rss" },
+          { t: "美股周线收跌，布伦特回落至96.78美元", s: "AP 7月24日数据称，标普500收于7411.98点，道指51947.25点，纳指24975.82点；布伦特原油从102美元附近回落到96.78美元，但四大指数周线均下跌。", link: "https://apnews.com/article/02d01b8f38ccd51f605c4414cdd4fa9b" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·知乎",
+        items: [
+          { t: "【第1】《群星闪耀时》也官宣撤档", s: "知乎热榜第1，抓取时约1372万热度；网友把它与《争洛阳》撤档连在一起讨论，焦点是2026暑期档大片为何连续调整档期和口碑风险。", link: "https://www.zhihu.com/question/2064850023011935595" },
+          { t: "【第2】邓煜获2026年菲尔兹奖", s: "知乎热榜第2，抓取时约776万热度；讨论从菲尔兹奖、数学与物理交叉延伸到诺贝尔物理学奖可能性，网友争论基础数学成果如何被物理界认可。", link: "https://www.zhihu.com/question/2064329046528414734" },
+          { t: "【第3】为什么说小男孩最难养", s: "知乎热榜第3，抓取时约328万热度；话题围绕儿童安全、性别刻板印象和家庭教育经验展开，原问题把“小男孩行为准则”写成“只要死不了就安全”。", link: "https://www.zhihu.com/question/2057134171752084148" },
+          { t: "【第4】罗永浩炮轰智能电视套娃收费", s: "知乎热榜第4，抓取时约292万热度；罗永浩7月25日吐槽“长辈模式”仍难用，网友集中讨论IPTV、开机进直播和电视会员多层收费。", link: "https://www.zhihu.com/question/2064500575325181312" },
+          { t: "【第5】24岁女孩正颌手术被做反", s: "知乎热榜第5，抓取时约240万热度；武汉卫健部门已介入，讨论集中在2025年手术是否误诊、过度医疗，以及医院和医生应承担的责任。", link: "https://www.zhihu.com/question/2064692382461685795" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·B站",
+        items: [
+          { t: "【第1】极客湾手机续航大横评", s: "UP主极客湾Geekerwan，抓取时播放约198.7万、点赞约30.8万；视频自购78台零售手机，用AI Agent 5.0标准测试续航、电池锁容和充电降速。", link: "https://www.bilibili.com/video/BV1LR336sEFX" },
+          { t: "【第2】奇怪的玩具工厂第五章Part1", s: "UP主鲤鱼Ace，抓取时播放约207.3万、点赞约33.4万；视频为游戏实况内容，简介多次提醒不要相信仿冒账号或AI生成求助信息。", link: "https://www.bilibili.com/video/BV1dz356wEgr" },
+          { t: "【第3】《下一个是谁》第七季第2期", s: "UP主自来卷三木，抓取时播放约296.5万、点赞约32.1万；本季延续抽iPhone17 Pro玩法，第二期主打包下一整座山的户外挑战。", link: "https://www.bilibili.com/video/BV1KRg462E53" },
+          { t: "【第4】明日方舟EP《酸橙色信笺》", s: "UP主明日方舟，抓取时播放约160.9万、点赞约16.9万；EP预告7月28日18点上架各音乐平台，粉丝围绕安洁莉娜夏日影像互动。", link: "https://www.bilibili.com/video/BV1nB3u6tEHD" },
+          { t: "【第5】泛式讲二次元袜学导论", s: "UP主泛式，抓取时播放约199.6万、点赞约19.4万；视频参加bilibili次元论战S3，用1026秒讨论小腿袜、过膝袜等二次元符号。", link: "https://www.bilibili.com/video/BV1Tdgh6aESA" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·抖音",
+        items: [
+          { t: "【第1】重庆彭水发现失联中巴车残骸", s: "抖音热榜第1，抓取时热度约1214万；网友关注失联车辆残骸发现位置、搜救进展和山区道路安全，相关短视频多为现场信息汇总。", link: "https://www.douyin.com/search/%E9%87%8D%E5%BA%86%E5%BD%AD%E6%B0%B4%E5%8F%91%E7%8E%B0%E5%A4%B1%E8%81%94%E4%B8%AD%E5%B7%B4%E8%BD%A6%E6%AE%8B%E9%AA%B8" },
+          { t: "【第2】长鑫科技今日上市", s: "抖音热榜第2，抓取时热度约1210万；话题围绕科创板上市、8.66元发行价、半导体国产替代和打新收益预期展开。", link: "https://www.douyin.com/search/%E9%95%BF%E9%91%AB%E7%A7%91%E6%8A%80%E4%BB%8A%E6%97%A5%E4%B8%8A%E5%B8%82" },
+          { t: "【第3】红树林保护获亮眼成绩", s: "抖音热榜第3，抓取时热度约1209万；用户主要转发生态保护成果、湿地修复和沿海生物多样性案例，短视频多用航拍画面呈现。", link: "https://www.douyin.com/search/%E7%BA%A2%E6%A0%91%E6%9E%97%E4%BF%9D%E6%8A%A4%E8%8E%B7%E4%BA%AE%E7%9C%BC%E6%88%90%E7%BB%A9" },
+          { t: "【第4】夏日复古风通勤穿搭来啦", s: "抖音热榜第4，抓取时热度约1189万；内容以职场穿搭、复古配色和夏季轻薄面料为主，商业种草与普通用户仿拍同时升温。", link: "https://www.douyin.com/search/%E5%A4%8F%E6%97%A5%E5%A4%8D%E5%8F%A4%E9%A3%8E%E9%80%9A%E5%8B%A4%E7%A9%BF%E6%90%AD%E6%9D%A5%E5%95%A6" },
+          { t: "【第5】万千气象看青海", s: "抖音热榜第5，抓取时热度约1107万；话题集中在青海自然风光、生态治理和文旅宣传，用户用短视频展示高原湖泊、草原与城市变化。", link: "https://www.douyin.com/search/%E4%B8%87%E5%8D%83%E6%B0%94%E8%B1%A1%E7%9C%8B%E9%9D%92%E6%B5%B7" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·X",
+        items: [
+          { t: "【第1】#AEWRedemption", s: "Trends24美国榜最新第1；AEW 7月26日在蒙特利尔Bell Centre举行Redemption付费赛事，Kenny Omega、Kevin Knight等多场冠军战带动摔角粉丝刷屏。", link: "https://twitter.com/search?q=%23AEWRedemption&src=trend_click" },
+          { t: "【第2】Ospreay", s: "Trends24美国榜最新第3；Will Ospreay在AEW Redemption剧情中与Jon Moxley、Young Bucks相关，赛后关于他是否该“扣动扳机”的讨论升温。", link: "https://twitter.com/search?q=Ospreay&src=trend_click" },
+          { t: "【第3】Corey Heim", s: "Trends24前一小时榜首；NASCAR官方赛果显示Corey Heim赢下2026 Brickyard 400，160圈后领先Christopher Bell、Joey Logano，引发赛车圈热议。", link: "https://twitter.com/search?q=%22Corey%20Heim%22&src=trend_click" },
+          { t: "【第4】Jackson Koivun", s: "Trends24榜单持续出现；Auburn选手Jackson Koivun在3M Open以25-under 259夺得个人首个PGA Tour冠军，并刷新赛事得分纪录。", link: "https://twitter.com/search?q=%22Jackson%20Koivun%22&src=trend_click" },
+          { t: "【第5】Fauci", s: "Trends24最新第18；纽约邮报披露Rand Paul公布的Fauci日记，称其在2020年美国新冠死亡超6万人时记录媒体关注和名气变化，引发政治争论。", link: "https://twitter.com/search?q=Fauci&src=trend_click" }
+        ]
+      }
+    ],
+    podcasts: [
+      { show: "硅谷101", title: "E245｜藏在大模型背后的新闻人：GPT们的回复是这样写出来的", note: "7月23日更新，讨论内容工程师如何把新闻、编辑和纪录片经验转化为大模型回复风格。", audio: "https://aphid.fireside.fm/d/1437767933/f0f20376-8faf-4940-b920-84af6c734e2d/5aeaeb64-9165-4271-9884-23329b511e11.mp3", link: "https://sv101.fireside.fm/258" },
+      { show: "What's Next｜科技早知道", title: "可以给你的 Agent 发一点零花钱了 | S10E22", note: "7月22日更新，梳理Visa、Mastercard、Stripe、Google、OpenAI布局Agent支付基础设施。", audio: "https://aphid.fireside.fm/d/1437767933/4931937e-0184-4c61-a658-6b03c254754d/9a652c19-ceb3-46c2-87b4-bca36e684311.mp3", link: "https://guiguzaozhidao.fireside.fm/20240436" },
+      { show: "疯投圈", title: "143 ✪ 🚗「蔚小理」的高端探索", note: "7月27日更新，从商业分析和消费品牌角度讨论蔚来、小鹏、理想在价格战中的高端化路径。", audio: "https://rio.xyzcdn.net/crazycapital/ep143.mp3", link: "https://crazy.capital/143" }
+    ]
+  },
+  {
     date: "2026-07-26",
     weekday: "周日",
     lead: {

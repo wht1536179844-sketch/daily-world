@@ -4,6 +4,104 @@
    格式说明见 每日播报_操作规程.md。人物志由 人物志故事库.js 按日轮换，不在本文件。 */
 const DAILY_ARCHIVE = [
   {
+    date: "2026-07-28",
+    weekday: "周二",
+    lead: {
+      title: "Kimi K3 开源，把中美开放权重之争推到台前",
+      link: "https://36kr.com/newsflashes/3914648643277958?f=rss",
+      body: "月之暗面在7月27日晚发布 Kimi K3 模型权重、技术报告，并同步开源 MoonEP、FlashKDA、AgentEnv 等训练基础设施。36氪快讯披露，Kimi K3 是 2.8 万亿参数 MoE 模型，具备原生视觉理解能力，支持 100 万 token 上下文，官方称可自由下载、部署并嵌入终端产品。\n背景是，中国开放权重模型正持续冲击美国闭源 API 模式。The Verge 同日把 Kimi K3 称为让 OpenAI、Google、Anthropic 重新思考“哪些能力该锁起来”的代表案例；TechCrunch 则报道，Anthropic CEO Dario Amodei 公开澄清公司从未主张禁止开放权重模型，但担心更强模型被威权政府用于军事或生物风险。\n细节上，Kimi K3 不只放权重，还放训练 Infra，这会降低企业自部署门槛。对国内开发者来说，100 万 token 长上下文、视觉能力和 MoE 架构组合，比单纯跑分更关键，因为它直接关系到代码库理解、文档处理和多模态 Agent 的本地化落地。",
+      why: "对关注 AI 的中国读者来说，Kimi K3 开源意味着国产前沿模型正在从“可调用”走向“可部署、可改造”，也会加速企业重新评估闭源 API 依赖。",
+      sources: [
+        { name: "36氪", link: "https://36kr.com/newsflashes/3914648643277958?f=rss" },
+        { name: "The Verge", link: "https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies" },
+        { name: "TechCrunch", link: "https://techcrunch.com/2026/07/27/anthropics-dario-amodei-responds-doesnt-oppose-open-weight-models-but-fears-chinese-ai/" }
+      ]
+    },
+    news: [
+      {
+        cat: "🤖 AI 前沿",
+        items: [
+          { t: "微软发布首个网络安全专用模型", s: "TechCrunch 7月27日报道，微软推出 MAI-Cyber-1-Flash 与 Perception 平台；Mustafa Suleyman 称模型绑定 GPT-5.4 后在 Cyber Gym 基准超过 Gemini、GPT-5.5 Cyber 等竞品，并将立即进生产。", w: "AI 安全开始进入模型、平台和红蓝队协作一体化竞争。", link: "https://techcrunch.com/2026/07/27/microsoft-launches-its-first-cyber-model-and-a-new-agentic-cybersecurity-system/" },
+          { t: "SSI 获英伟达数十亿美元算力支持", s: "TechCrunch 7月27日报道，Ilya Sutskever 创办的 Safe Superintelligence 与 Nvidia 达成长线合作，将接入 Vera Rubin GPU 平台，算力资源预计提升一个数量级；彭博称交易规模约 50 亿美元。", w: "超级智能安全路线也在加速堆算力，闭门研究进入扩张期。", link: "https://techcrunch.com/2026/07/27/ilya-sutskevers-safe-superintelligence-partners-with-nvidia-to-scale-its-ai-research/" },
+          { t: "蚂蚁百灵发布 Ling-3.0-Flash", s: "量子位7月27日报道，Ling-3.0-Flash 总参数 124B、单次激活 5.1B，采用 5:1 混合注意力层设计；长输入首字延迟降低 60% 至 80%，并扩展超 10000 个真实交互训练环境。", w: "国产模型竞争从参数规模转向推理效率和 Agent 稳定性。", link: "https://www.qbitai.com/2026/07/461149.html" },
+          { t: "纳德拉提醒企业别把思考外包给单一 AI", s: "TechCrunch 7月27日报道，Satya Nadella 在 CNN 节目中称，企业应保留模型使用元数据、提示词和上下文记忆；他警告，完全依赖一家 AI 实验室的公司可能无法长期生存。", w: "多模型网关和企业自有上下文会成为下一轮基础设施。", link: "https://techcrunch.com/2026/07/27/satya-nadella-says-companies-that-trust-one-ai-for-everything-may-not-survive/" },
+          { t: "Claude 共享聊天曾被 Google 索引", s: "TechCrunch 7月27日报道，部分 Claude shared chats 与 Artifacts 页面可能出现在 Google 搜索结果中；事件再次提醒用户，公开分享链接不等于私密空间，含代码、客户资料的 1 条链接也可能外泄。", w: "AI 产品的分享默认值，正在变成真实的数据安全风险。", link: "https://techcrunch.com/2026/07/27/psa-your-claude-shared-chats-and-artifacts-may-have-ended-up-on-google/" }
+        ]
+      },
+      {
+        cat: "🇨🇳 中国",
+        items: [
+          { t: "中国女童基因编辑治疗后死亡引调查", s: "BBC中文7月27日报道，一名6岁女童2025年3月24日在上海接受 CHD3 基因突变碱基编辑治疗后一周内死亡；家属曾为个性化疗法提供约 86 万美元资金，上海交大医学院已成立专项工作组。", link: "https://www.bbc.com/zhongwen/articles/cjrv7vp8p53o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "美团 AI 助手“小团”升级代理执行能力", s: "美团7月27日宣布本地生活 AI 助手“小团”升级至2.0，可协助下单、打车、订位等操作；其信息服务覆盖全国 2800 多个城市，累计完成超 7 亿次商家信息校验。", link: "https://www.meituan.com/news/NN260727198008607" },
+          { t: "瑞幸泰国商标案二审胜诉", s: "证券日报7月27日报道，泰国专门案件上诉法院维持瑞幸咖啡胜诉，判令被告撤销抢注商标并停止相关标识使用；赔偿总额逾 9500 万泰铢，约合 300 万美元。", link: "https://finance.eastmoney.com/a/202607273822065742.html" },
+          { t: "中国氢能航空创业公司完成天使+轮融资", s: "36氪7月27日报道，易氢动力完成数千万元天使+轮融资，团队源自清华，产品从 30kW 液冷燃料电池迭代至 90-110kW；其空冷方案在2026年目标做到数千万元营收。", link: "https://36kr.com/p/3913736066028932?f=rss" }
+        ]
+      },
+      {
+        cat: "🇺🇸 美国·国际",
+        items: [
+          { t: "印度 Z 世代抗议迫使教育部长下台", s: "BBC中文7月28日报道，印度 NEET 试题泄露事件引发青年抗议，教育部长普拉丹辞职；官方数据显示，15至29岁人口失业率由一年前 13.8% 升至6月的 16.2%。", link: "https://www.bbc.com/zhongwen/articles/c0ejq8n30qxo/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "所罗门群岛中资金矿坍塌传10人死亡", s: "BBC中文7月27日报道，金岭矿场7月27日凌晨发生坍塌，当地媒体称已发现 10 具遗体，但万国黄金集团否认伤亡；该金矿去年贡献所罗门群岛近四分之一 GDP。", link: "https://www.bbc.com/zhongwen/articles/cn0n57kynz2o/trad?at_medium=RSS&at_campaign=rss" },
+          { t: "美国 T-Mobile 大范围服务中断", s: "WFAA 7月27日报道，美国多地 T-Mobile 用户出现手机进入 SOS 模式等故障；Downdetector 数据显示，截至美东下午5点，故障报告一度超过 62000 起，运营商在 X 上回应用户。", link: "https://www.wfaa.com/article/news/nation-world/t-mobile-users-outage-latest-updates/507-f6be3924-a4ec-4b38-a90f-67e64fa3dccc" },
+          { t: "Fauci 新冠时期日记引发美国政治争论", s: "The Guardian 7月27日报道，参议员 Rand Paul 公开 Anthony Fauci 日记摘录，内容涉及其对特朗普政府疫情应对的不满；媒体称相关材料跨 2019 至 2022 年，Fauci 将赴参议院作证。", link: "https://www.theguardian.com/us-news/2026/jul/27/anthony-fauci-trump-covid-journal" }
+        ]
+      },
+      {
+        cat: "💰 财经",
+        items: [
+          { t: "长鑫科技上市带动蔚来账面浮盈超7亿", s: "ZAKER 7月28日报道，长鑫科技7月27日登陆科创板，收盘报 49 元、涨幅 465.82%、总市值超 3.3 万亿元；蔚来战略配售 1.58 亿元，按收盘价浮盈约 7.4 亿元。", link: "https://www.myzaker.com/article/6a66d5d4b15ec01fca1effc9" },
+          { t: "苹果重返全球市值第一", s: "MarketWatch 7月27日报道，苹果股价涨约 1% 至 336.91 美元，市值达 4.93 万亿美元；英伟达下跌约 5% 后市值约 4.78 万亿美元，苹果重新成为全球市值第一。", link: "https://www.marketwatch.com/story/apple-reclaims-title-of-worlds-largest-company-after-historic-stretch-of-outperformance-92920ab6" },
+          { t: "疯投圈新一期拆解“蔚小理”高端化", s: "疯投圈7月27日上线第143期，围绕蔚来、小鹏、理想在价格战和舆论战中的高端化尝试展开；节目把汽车视为普通家庭除房产外最大额的单笔消费来观察品牌竞争。", link: "https://crazy.capital/143" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·知乎",
+        items: [
+          { t: "【第1】王虹、邓煜成长经历与顶尖科研土壤", s: "知乎热榜第1，抓取时约1258万热度；网友围绕王虹1991年出生、邓煜1989年出生及二人学术路径，讨论“金子在哪都会发光”是否忽视教育资源和导师环境。", link: "https://www.zhihu.com/question/2064337609879507952" },
+          { t: "【第2】美国校园午餐“科技狠活”争议", s: "知乎热榜第2，抓取时约1118万热度；话题源于7月24日报道的视频，网友争论黏稠牛奶、可被磁铁吸起的胡萝卜是否说明食品加工、储存或拍摄误导问题。", link: "https://www.zhihu.com/question/2065066881015177978" },
+          { t: "【第3】湖南被安徽反超后怎么发展", s: "知乎热榜第3，抓取时约547万热度；讨论集中在湖南跌出全国前十、江西追近陕西的区域竞争，网友比较产业结构、制造业链条和省会虹吸效应。", link: "https://www.zhihu.com/question/2064849542147748410" },
+          { t: "【第4】如何评价 Kimi K3 正式开源", s: "知乎热榜第4，抓取时约387万热度；网友关注 2.8 万亿参数、100万 token 上下文、MoonEP/FlashKDA/AgentEnv 开源，对比闭源模型和国产生态机会。", link: "https://www.zhihu.com/question/2065214142915654338" },
+          { t: "【第5】樊哙生吃彘肩为何没感染", s: "知乎热榜第5，抓取时约304万热度；讨论从《史记》文本真实性、古代“生吃”是否真生、猪肉寄生虫风险，到现代食品安全常识延伸。", link: "https://www.zhihu.com/question/267314352" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·B站",
+        items: [
+          { t: "【第1】极客湾手机续航大横评", s: "UP主极客湾Geekerwan，抓取时播放约263.6万、点赞约38.1万；视频自购78台零售手机，用 AI Agent 5.0 标准测试续航、电池锁容和充电降速。", link: "https://b23.tv/BV1LR336sEFX" },
+          { t: "【第2】奇怪的玩具工厂第五章 Part1", s: "UP主鲤鱼Ace，抓取时播放约315.2万、点赞约44.6万；视频为游戏实况内容，简介多次提醒不要相信仿冒账号或 AI 生成求助信息。", link: "https://b23.tv/BV1dz356wEgr" },
+          { t: "【第3】明日方舟 EP《酸橙色信笺》", s: "UP主明日方舟，抓取时播放约184.1万、点赞约18.7万；EP预告7月28日18点上架各音乐平台，粉丝围绕安洁莉娜夏日影像互动。", link: "https://b23.tv/BV1nB3u6tEHD" },
+          { t: "【第4】朱志鑫原创 SOLO 十机位直拍", s: "UP主帆_朱志鑫，抓取时播放约38.5万、点赞约7.3万；视频来自“登陆少年梦寐以求演唱会”，主打 DAY-1 原创 SOLO《Do All Swag》4K直拍。", link: "https://b23.tv/BV12v336MEVJ" },
+          { t: "【第5】苏新皓《囍》solo直拍", s: "UP主Renaissance苏新皓，抓取时播放约35.0万、点赞约6.4万；视频来自梦寐以求青岛演唱会，粉丝讨论舞台编排、国风曲目和个人表现。", link: "https://b23.tv/BV15Q3u6UEfW" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·抖音",
+        items: [
+          { t: "【第1】合肥国资持股长鑫市值超1万亿", s: "抖音热榜第1，抓取时间2026-07-28 09:54，热度约1134.6万；网友把长鑫科技上市、合肥国资投资回报和国产存储产业链放在一起讨论。", link: "" },
+          { t: "【第2】“红霞”停止编号", s: "抖音热榜第2，抓取时间2026-07-28 09:54，热度约1132.2万；话题围绕台风“红霞”减弱停编后的降雨、转移安置和沿海复工复产。", link: "" },
+          { t: "【第3】数说中国经济新亮点", s: "抖音热榜第3，抓取时间2026-07-28 09:54，热度约1124.8万；短视频集中展示消费、制造业、外贸或新质生产力数据，评论区争论体感与宏观数字差异。", link: "" },
+          { t: "【第4】中国男篮90:82再胜喀麦隆", s: "抖音热榜第4，抓取时间2026-07-28 09:54，热度约1112.2万；焦点是中国男篮以90:82再次击败喀麦隆，网友讨论热身赛含金量和后卫线表现。", link: "" },
+          { t: "【第5】这次出发不是找你是去找自由", s: "抖音热榜第5，抓取时间2026-07-28 09:54，热度约1056.1万；该话题偏情绪表达和旅行/分手文案，网友用短视频二创表达离开关系后的自由感。", link: "" }
+        ]
+      },
+      {
+        cat: "🔥 昨日最热·X",
+        items: [
+          { t: "【第1】#WWERaw", s: "美国 X 趋势第1；7月27日 WWE Raw 在洛杉矶 Intuit Dome 播出，是 SummerSlam 前最后一期节目，Oba Femi、Brock Lesnar、Joe Hendry 等桥段带动讨论。", link: "https://www.cagesideseats.com/wwe/463706/wwe-raw-results-live-discussion-july-27-2026-concerthausen" },
+          { t: "【第2】Fauci", s: "美国 X 趋势第2；Anthony Fauci 新冠时期日记被公开后引发政治争议，媒体称材料覆盖2019至2022年，他还将面对参议院相关听证。", link: "https://www.wsj.com/politics/policy/key-takeaways-from-anthony-faucis-covid-era-journals-078787d4" },
+          { t: "【第3】T-Mobile", s: "美国 X 趋势第3；7月27日 T-Mobile 大范围中断，Downdetector 报告一度超过62000起，用户在 X 上集中反馈手机进入 SOS 模式。", link: "https://www.houstonchronicle.com/news/houston-texas/trending/article/t-mobile-outage-today-thursday-22362513.php" },
+          { t: "【第4】Vita Vea", s: "美国 X 趋势第4；多家体育媒体称31岁的 Buccaneers 防守截锋 Vita Vea 因续约谈判停滞申请交易，他正处在4年7100万美元合同最后一年。", link: "https://www.bucsnation.com/tampa-bay-buccaneers-news/68014/reports-vita-vea-requests-trade-out-of-tampa-bay" },
+          { t: "【第5】X Money", s: "美国 X 趋势第5；话题与 X 平台金融服务、支付和高收益账户讨论有关，getdaytrends 当天同时列出“6% APY”等相关词，网友关注产品何时正式开放。", link: "https://getdaytrends.com/united-states/" }
+        ]
+      }
+    ],
+    podcasts: [
+      { show: "硅谷101", title: "E245｜藏在大模型背后的新闻人：GPT们的回复是这样写出来的", note: "本期聚焦大模型回答背后的新闻生产、资料筛选和内容编辑机制，适合关心 AI 与媒体关系的听众。", audio: "https://aphid.fireside.fm/d/1437767933/f0f20376-8faf-4940-b920-84af6c734e2d/5aeaeb64-9165-4271-9884-23329b511e11.mp3", link: "https://sv101.fireside.fm/258" },
+      { show: "What's Next｜科技早知道", title: "国产 AI 算力能凭「超节点」弯道超车吗? | WAIC 深度观察 S10E23", note: "节目围绕 WAIC 观察国产 AI 算力、超节点方案和产业链突破，适合补充理解本周 AI 基建讨论。", audio: "https://aphid.fireside.fm/d/1437767933/4931937e-0184-4c61-a658-6b03c254754d/a6c6ab3e-72b2-470b-aefd-04b19679d37f.mp3", link: "https://guiguzaozhidao.fireside.fm/20240437" },
+      { show: "疯投圈", title: "143 ✪ 🚗「蔚小理」的高端探索", note: "本期从商业分析和消费品牌角度观察蔚来、小鹏、理想，讨论价格战中的高端化路径。", audio: "https://rio.xyzcdn.net/crazycapital/ep143.mp3", link: "https://crazy.capital/143" }
+    ]
+  },
+  {
     date: "2026-07-27",
     weekday: "周一",
     lead: {
